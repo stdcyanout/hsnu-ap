@@ -134,6 +134,14 @@ button {
         border: none;
         border-radius: 0;
     }
+
+    form {
+        width: 77.5%;
+    }
+
+    .input-box {
+        width: 100%;
+    }
 }
 
 @media (max-height: 450px) {
