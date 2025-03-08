@@ -91,7 +91,8 @@ h2 {
 
 .input-box .icon {
     position: absolute;
-    right: 8px;
+    right: 0;
+    padding: 0 8px;
     color: var(--primary);
     font-size: 1.5em;
     line-height: 57px;
