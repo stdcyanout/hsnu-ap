@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins);
-@import url(https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap);
 
 @font-face {
     font-family: "Permanent Marker";
@@ -11,6 +10,8 @@
 }
 
 * {
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
