@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSNU's Wi-Fi</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="login-box">
+            <form action="">
+                <h2>HSNU's Wi-Fi</h2>
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>帳號</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon" id="ebtn-psw" onclick="toggle_password()">
+                        <ion-icon id="eye-icon" name="eye"></ion-icon>
+                    </span>
+                    <input type="password" id="form-pswd" required>
+                    <label>密碼</label>
+                </div>
+                <button type="submit">登入</button>
+                <div class="register-link">
+                    <p>不會登入嗎? <a href="#">使用教學</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+    function toggle_password() {
+        if (document.getElementById("form-pswd").type === "password") {
+            document.getElementById("form-pswd").type = "text";
+            document.getElementById("eye-icon").name = "eye-off"; // 切換為隱藏圖示
+        } else {
+            document.getElementById("form-pswd").type = "password";
+            document.getElementById("eye-icon").name = "eye"; // 切換為顯示圖示
+        }
+    }
+    </script>
+</body>
+
+</html>
