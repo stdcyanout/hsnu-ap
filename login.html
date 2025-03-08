@@ -14,7 +14,7 @@
     <section>
         <div class="login-box">
             <form action="">
-                <h2>HSNU's Wi-Fi</h2>
+                <h2 id="heading">HSNU's Wi-Fi</h2>
                 <div class="input-box">
                     <input type="text" required>
                     <label>帳號</label>
@@ -47,6 +47,16 @@
             document.getElementById("eye-icon").name = "eye"; // 切換為顯示圖示
         }
     }
+
+    function update_heading() {
+        if (window.innerWidth < 360) {
+            document.getElementById("heading").innerHTML = "HSNU's<br>Wi-Fi";
+        } else {
+            document.getElementById("heading").innerHTML = "HSNU's Wi-Fi";
+        }
+    }
+    window.addEventListener("resize", update_heading);
+    update_heading();
     </script>
 </body>
 
