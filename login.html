@@ -13,17 +13,17 @@
 
     <section>
         <div class="login-box">
-            <form action="">
+            <form action="https://captiveportal-login.hs.ntnu.edu.tw/auth/index.html/u" method="post">
                 <h2 id="heading">HSNU's Wi-Fi</h2>
                 <div class="input-box">
-                    <input type="text" required>
+                    <input type="text" name="user" required>
                     <label>帳號</label>
                 </div>
                 <div class="input-box">
                     <span class="icon" id="ebtn-psw" onclick="toggle_password()">
                         <ion-icon id="eye-icon" name="eye"></ion-icon>
                     </span>
-                    <input type="password" id="form-pswd" required>
+                    <input type="password" name="password" id="form-pswd" required>
                     <label>密碼</label>
                 </div>
                 <button type="submit">登入</button>
