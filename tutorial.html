@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSNU's Wi-Fi</title>
+    <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+    <section>
+        <div class="login-box">
+            <h2 id="heading">HSNU's Wi-Fi</h2>
+            <div class="button-grid">
+                <button onclick="showInfo('teacher')">教師</button>
+                <button onclick="showInfo('student')">學生</button>
+                <button onclick="showInfo('intern')">實習老師</button>
+                <button onclick="showInfo('staff')">職員工</button>
+            </div>
+            
+            <div id="default" class="info">
+                <p><strong>請選擇身分。</strong></p>
+            </div>
+
+            <div id="teacher" class="info">
+                <p><strong>帳號格式：</strong></p>
+                <ul>
+                    <li><strong>109/8/1 以後：</strong>t + 排課代碼4碼 + 身分證末2碼。</li>
+                    <li><strong>109/7/31 以前：</strong>t + 排課代碼3碼 + 身分證末3碼。</li>
+                </ul>
+                <p><strong>預設密碼：</strong>身分證末9碼。</p>
+            </div>
+            
+            <div id="student" class="info">
+                <p><strong>帳號格式：</strong>學號6碼。</p>
+                <p><strong>預設密碼：</strong>身分證末9碼。</p>
+            </div>
+            
+            <div id="intern" class="info">
+                <p><strong>帳號格式：</strong>tt + 身分證末4碼。</p>
+                <p><strong>預設密碼：</strong>身分證末9碼。</p>
+            </div>
+            
+            <div id="staff" class="info">
+                <p><strong>帳號格式：</strong></p>
+                <ul>
+                    <li><strong>預設帳號：</strong>t + 身分證末6碼。</li>
+                    <li><strong>自訂帳號：</strong>txxxxxx，最多10碼。</li>
+                </ul>
+                <p><strong>預設密碼：</strong>身分證末9碼。</p>
+            </div>
+
+            <div class="link">
+                <p><a href="login.html">回登入頁面</a></p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function update_heading() {
+        if (window.innerWidth < 360) {
+            document.getElementById("heading").innerHTML = "HSNU's<br>Wi-Fi";
+        } else {
+            document.getElementById("heading").innerHTML = "HSNU's Wi-Fi";
+        }
+        }
+        window.addEventListener("resize", update_heading);
+        update_heading();
+
+        function showInfo(id) {
+            let infos = document.querySelectorAll('.info');
+            infos.forEach(info => info.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+        showInfo('default');
+    </script>
+</body>
+</html>
